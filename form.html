@@ -1,0 +1,197 @@
+<html>
+
+<body>
+    <H1>Welcome to Siwo Bank</H1>
+    <h2>Application form of credit card</h2>
+    <form action="/echo" method="POST">
+        <fieldset>
+            <!-- Personal Information Surname, Firstname, HKID, DOB, Tel Num, Email address, Sex, Nationality,Education Level   -->
+            <legend>Personal Information</legend>
+            <!-- Surname -->
+            <label for="surName">Surname:*</label>
+            <input type="text" id="surName" name="surName" required><br><br>
+
+            <!-- Surname -->
+            <label for="firstName">First name:*</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <!-- HKID -->
+            <label for="hkid">HKID:*</label>
+            <input type="text" id="hkid" name="hkid" pattern="[a-zA-Z]{1}[0-9]{6}" size=7 required>
+            <input type="text" id="hkidLast" name="hkidLast" pattern="[\w]{1}" size="1" required>
+            <br><br>
+
+            <!-- Date of Birth -->
+            <label for="DOB">Date pf Birth:* <i>(dd/mm/yyyy)</i></label>
+            <input type="date" id="DOB" name="DOB" value="2021-09-10" required><br><br>
+
+            <!-- Tel Num -->
+            <label for="tel">Phone Number:* </label>
+            <select id="tel" name="tel" required>
+                <option value="852">+852</option>
+                <option value="86">+86</option>
+            </select>
+            <input type="text" id="number" name="number" pattern="[0-9]{8}" required>
+            <br><br>
+            <!-- email -->
+            <label for="email">E-mail:*</label>
+            <input type="text" id="email" name="email" pattern="[\w-\.]+@([\w-]+\.)+[\w-]{2,4}" required><br><br>
+            <!-- sex -->
+            <label for="sex">Sex:*</label><br>
+            <input type="radio" id="title" name="title" value="mister" required><label for="mister">Mister</label>
+            <br>
+            <input type="radio" id="title" name="title" value="miss" required><label for="miss">Miss</label>
+            <br>
+            <!-- nationality -->
+            <label for="nationality">Nationality:*</label>
+            <input type="text" id="nationality" name="nationality" required>
+            <br>
+            <!-- educationLevel -->
+            <label for="educationLevel">Education Level:*</label>
+            <select id="educationLevel" name="educationLevel" required>
+                <option value="secondary">Secondary School</option>
+                <option value="highSchool">High school</option>
+                <option value="bachelor">Bachelor</option>
+                <option value="postgraduate">Postgraduate</option>
+            </select>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <!-- Address  room, floor, flat, house, estate, street No (Optional), District, Region, city, Address Phone Number  -->
+            <legend>Address</legend>
+            <!-- room -->
+            <label for="room">Room:*</label>
+            <input type="text" id="room" name="room" required>
+
+            <!-- floor -->
+            <label for="floor">Floor:*</label>
+            <input type="text" id="floor" name="floor" required>
+            <br><br>
+
+            <!-- flat -->
+            <label for="flat">Flat: (Optional)</label>
+            <input type="text" id="flat" name="flat">
+            <!-- house -->
+            <label for="house">House:*</label>
+            <input type="text" id="house" name="house" required>
+            <br><br>
+
+            <!-- estate -->
+            <label for="estate">Estate:*</label>
+            <input type="text" id="estate" name="estate" required>
+            <br><br>
+            <!-- street no. -->
+            <label for="streetNum">Street No. : (Optional)</label>
+            <input type="text" id="streetNum" name="streetNum">
+            <!-- District -->
+            <label for="district">District: *</label>
+            <input type="text" id="district" name="district" required>
+            <br><br>
+            <!-- Region -->
+            <label for="region">Region:*</label><br>
+            <input type="radio" id="region" name="region" value="hongkong" required><label for="hongkong">Hong
+                Kong</label>
+            <input type="radio" id="region" name="region" value="kowloon" required><label for="kowloon">Kowloon</label>
+            <input type="radio" id="region" name="region" value="newTerritories" required><label
+                for="newTerritories">New Territories</label>
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <!-- Financial Infomation -->
+            <legend>Financial Infomation</legend>
+            <!-- Source of Income -->
+            <label for="sourceOfIncome">Source of Income: *</label>
+            <input type="text" id="sourceOfIncome" name="region" required>
+            <br><br>
+            <!-- salary (per year) -->
+            <label for="salary">Salary (per year):*</label>
+            <input type="text" id="salary" name="salary" pattern="[1-9][0-9]{5,}"
+                placeholder="Salary must be larger than 100K per year." size="50" required>
+            <br><br>
+            <!-- Job Category -->
+            <label for="'jobCategory">Job Category: *</label>
+            <input type="text" id="jobCategory" name="jobCategory" required>
+            <br><br>
+            <!-- Company Name -->
+            <label for="companyName">Company Name: *</label>
+            <input type="text" id="Company Name" name="Company Name" required>
+            <br><br>
+            <!-- Title/Position -->
+            <label for="titlePosition">Title / Position: *</label>
+            <input type="text" id="titlePosition" name="titlePosition" required>
+            <br><br>
+            <!-- Company Phone Contact -->
+            <label for="companyPhoneContact">Company Phone Contact: *</label>
+            <input type="text" id="companyPhoneContact" name="companyPhoneContact" required>
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <!-- Company Address  room, floor, flat, house, estate, street No (Optional), District, Region, city, Address Phone Number  -->
+            <legend>Company Address</legend>
+            <!-- room -->
+            <label for="croom">Room:*</label>
+            <input type="text" id="croom" name="croom" required>
+
+            <!-- floor -->
+            <label for="cfloor">Floor:*</label>
+            <input type="text" id="cfloor" name="cfloor" required>
+            <br><br>
+
+            <!-- flat -->
+            <label for="cflat">Flat: (Optional)</label>
+            <input type="text" id="cflat" name="cflat">
+            <!-- house -->
+            <label for="chouse">House:*</label>
+            <input type="text" id="chouse" name="chouse" required>
+            <br><br>
+
+            <!-- estate -->
+            <label for="cestate">Estate:*</label>
+            <input type="text" id="cestate" name="cestate" required>
+            <br><br>
+            <!-- street no. -->
+            <label for="cstreetNum">Street No. : (Optional)</label>
+            <input type="text" id="cstreetNum" name="cstreetNum">
+            <!-- District -->
+            <label for="cdistrict">District: *</label>
+            <input type="text" id="cdistrict" name="cdistrict" required>
+            <br><br>
+            <!-- Region -->
+            <label for="cregion">Region:*</label><br>
+            <input type="radio" id="region" name="cregion" value="hongkong" required><label for="hongkong">Hong
+                Kong</label>
+            <input type="radio" id="region" name="cregion" value="kowloon" required><label for="kowloon">Kowloon</label>
+            <input type="radio" id="region" name="cregion" value="newTerritories" required><label
+                for="newTerritories">New Territories</label>
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <Legend>Declaration</Legend>
+            <!-- third Party -->
+            <label for="thirdParty">There are no third party/ agent involved in the process of the
+                application:*</label><br>
+            <input type="radio" id="region" name="thirdParty" value="yes" required><label for="yes">Yes</label>
+            <input type="radio" id="region" name="thirdParty" value="no" required><label for="no">No</label>
+            <br><br>
+            <!-- E-statement Received -->
+            <label for="eStatment">Do you want to receive E-statement?*</label><br>
+            <input type="radio" id="region" name="eStatment" value="yes" required><label for="yes">Yes</label>
+            <input type="radio" id="region" name="eStatment" value="no" required><label for="no">No</label>
+            <br><br>
+
+
+        </fieldset>
+        <br>
+        <!-- submit -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
